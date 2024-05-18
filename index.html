@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="section-1">
+      <div class="banner">
+        <div class="navbar">
+          <img src="./images/skybox.svg" alt="" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <h1>Ariet's Contact Book</h1>
+          <p>
+            This is my Contatc book where I keep all the contacts of people I
+            know. <br />CLick the view button to see the contacts.
+          </p>
+          <div>
+            <button class="createContactButton"href="#section-2">
+              <span class="buttonSpan"></span>Create Contact
+            </button>
+            <button class="viewContactsButton">
+              <span class="buttonSpan"></span>View Contacts
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="AddContactDiv">
+        <h1>Create Contact</h1>
+
+        <form id="form">
+          <label>First Name</label>
+          <input type="text" placeholder="First Name" />
+          <label>Last Name</label>
+          <input type="text" placeholder="Last Name" />
+          <label>Phone Number</label>
+          <input type="text" placeholder="Phone Number" />
+          <label>Photo</label>
+          <input type="file" placeholder="Photo" />
+          <button id="submitContact">Submit</button>
+        </form>
+      </div>
+    </section>
+    <section class="section-2" id="section-2">
+      <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name*</label>
+                        <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName" placeholder="Name" />
+                    </div>
+                    <div>
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+                    </div>
+                    <div>
+                        <label>Phone Number</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" />
+                    </div>
+                    <div>
+                        <label>Photo</label>
+                        <input type="file" name="photo" id="photo" />
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit" id="submitContact"/>
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="contactList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Last Name</th>
+                            <th>Phone Number</th>
+                            <th>Photo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
